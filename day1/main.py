@@ -35,8 +35,9 @@ def findSumOf2020PartTwo(l):
     for i in range(len(l) - 1):
         for j in range(len(l) - 1):
             for k in range(len(l) - 1):
-                if (l[i] + l[j] + l[k]) == 2020:
-                    return l[i] * l[j] * l[k]
+                if i != j and j != k:
+                    if (l[i] + l[j] + l[k]) == 2020:
+                        return l[i] * l[j] * l[k]
         
 if __name__ == "__main__":
     #print(findSumOf2020(expenses))
